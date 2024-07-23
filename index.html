@@ -3,6 +3,7 @@
     <head>
         <title>Jorge Ferreira | Curriculum</title>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <div class="content">
@@ -10,46 +11,60 @@
                 <img class="profile_picture" src="images/foto_perfil.JPG"></img>
                 <div class="top_text">
                     <h1 class="name">Jorge Lopes Ferreira</h1>
-                    <h3>Student of Computer Science</h3>
+                    <h3>Software Engineer</h3>
                 </div>
             </div>
-            <div class="information 1">
-                <div class="info education">
-                    <h1>EDUCATION</h1>
-                    Currently studying Computer Science at <a href="https://www.fct.unl.pt/">FCT Nova</a>
-                </div>
-                <div class="info skills">
-                    <h1>SKILLS</h1>
-                    Java programming<br>
-                    HTML + CSS + JavaScript + Vue.js<br>
-                    Linux systems like Debian and Arch Linux<br>
-                    Git
-                </div>
-                <div class="info interests">
-                    <h1>EXPERIENCE</h1>
-                    <b>Batch Builder Wizard:</b> 23rd March - 23rd July<br>
-                    Link Consulting internship where I developed a batch Wizard to aid users at creating and editing batches on the <a href="https://www.linkconsulting.com/what-we-do/products/atlas8/">Atlas</a> application.
+            <div class="information">
+                <div class="info summary">
+                    <h1>Summary</h1>
+                    <div class="summary container">
+                        <div class="summary entry">
+                            I started programming because I wanted to be able to tell the machine what I want it to do.
+                            I’m a software engineer and I like back‑end development, but I have also done front‑end development and tinkered with SQL databases.
+                            I’m fluent in Java, I like Linux, and I am interested in learning other programming languages.
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="information 2">
-                <div class="info interests">
-                    <h1>INTERESTS</h1>
-                    Program in Java, which I usually do in private projects<br>
-                    Write websites, like this one, I prefer to use less JavaScript or none of it
+                <div class="info education">
+                    <h1>Education</h1>
+                    MSc. in Computer Science at <a href="https://www.fct.unl.pt/">FCT Nova</a><br>
+                    BSc. in Computer Science at <a href="https://www.fct.unl.pt/">FCT Nova</a>
+                </div>
+                <div class="info skills">
+                    <h1>Skills</h1>
+                    Java, Python, Bash, C, Rust, C#, JS<br>
+                    HTML + CSS + JavaScript + Vue.js<br>
+                    Linux systems like Debian and Arch Linux<br>
+                    Git, LaTeX
                 </div>
                 <div class="info languages">
-                    <h1>LANGUAGES</h1>
+                    <h1>Languages</h1>
                     Portuguese - Native Speaker<br>
                     English - Cambridge English Key for Schools: A2 (CEFR level)
+                </div>
+            </div>
+            <div class="experience">
+                <h1>Experience</h1>
+                <div class="entries">
+                    <div class="link entry">
+                        <b>Intern</b> - <b>Link Consulting:</b> March 2021 - August 2021<br>
+                        The <a href="https://www.linkconsulting.com/what-we-do/products/atlas8/">Atlas</a> solution from Link is a tool for companies to manage their assets.
+                        Atlas has a batch module for integration with third party tools and to run functions that evaluate analitical expressions.
+                        These functions are defined with parameters written in different text fields.
+                        The goal was to simplify the way those expressions are created and edited, and automatically integrating them with Atlas.
+                        This was achieved by building on top of the existing Vue.js front‑end and Java back‑end, using the Agile method.
+                    </div>
                 </div>
             </div>
         </div>
         <footer>
             <div class="contacts">
                 Contacts<br>
-                Email: jorge.l.ferreira99@protonmail.com<br>
-                LinkedIn: <a href="https://www.linkedin.com/in/jorge-ferreira-2ba82a134">Jorge Ferreira</a><br>
-                GitHub: <a href="https://github.com/Jorge-L-F">Jorge-L-F</a>
+                <b><a class="contact" href="mailto:jorge.l.ferreira99@protonmail.com"><i class="fa fa-envelope"></i> Email</a></b>
+                <b><a class="contact" href="https://www.linkedin.com/in/jl-ferreira"><i class="fa fa-linkedin"></i> LinkedIn</a></b>
+                <b><a class="contact" href="https://github.com/Jorge-L-F"><i class="fa fa-github"></i> GitHub</a></b>
             </div>
             <div class="resources">
                 Resources<br>
@@ -69,16 +84,6 @@
                     color: white;
                 }
                 
-                a {
-                    color: lightgreen;
-                }
-                
-                .content {
-                    padding: 15px;
-                    box-sizing: border-box;
-                    text-align: center;
-                }
-                
                 footer {
                     display: flex;
                     position: absolute;
@@ -90,6 +95,10 @@
                     line-height: 25px;
                 }
                 
+                a {
+                    color: lightgreen;
+                }
+                
                 h1 {
                     color: darkorange;
                 }
@@ -98,15 +107,12 @@
                     color: grey;
                 }
                 
-                .name {
-                    color: white;
-                    margin-bottom: 0px;
+                .content {
+                    padding: 15px;
+                    box-sizing: border-box;
+                    text-align: center;
                 }
                 
-                .birth_date {
-                    margin-top: 3px;
-                }
-            
                 .top_container {
                     display: flex;
                     justify-content: center;
@@ -130,6 +136,15 @@
                     height: 200px;
                 }
                 
+                .name {
+                    color: white;
+                    margin-bottom: 0px;
+                }
+                
+                .birth_date {
+                    margin-top: 3px;
+                }
+                
                 .information {
                     display: flex;
                     justify-content: center;
@@ -144,12 +159,30 @@
                     padding-bottom: 30px;
                 }
                 
-                .education {
-                    flex-grow: 8;
+                .container,
+                .entries {
+                    display: flex;
+                    justify-content: center;
+                }
+                
+                .experience {
+                    padding: 15px;
+                    align-items: center;
+                    justify-content: center;
+                }
+                
+                .entry {
+                    max-width: 850px;
+                    text-align: justify;
                 }
                 
                 .contacts {
                     padding-right: 50px;
+                }
+                
+                .contact {
+                    text-decoration: none;
+                    margin-right: 10px;
                 }
             </style>
         </footer>
