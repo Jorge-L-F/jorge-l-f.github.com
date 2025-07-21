@@ -33,8 +33,8 @@
                 </div>
                 <div class="info skills">
                     <h1>Skills</h1>
-                    Java, Python, Bash, C, Rust, C#, JS<br>
-                    HTML + CSS + JavaScript + Vue.js<br>
+                    Java, Python, Bash, C, Rust, C#<br>
+                    HTML, CSS, JS, Vue, React<br>
                     Linux systems like Debian and Arch Linux<br>
                     Git, LaTeX
                 </div>
@@ -172,6 +172,15 @@
                 .entries {
                     display: flex;
                     justify-content: center;
+                }
+                @media only screen and (max-width: 1000px) {
+                    .entries {
+                        display: block;
+                    }
+                    .entry {
+                        margin-top: 25px;
+                        margin-bottom: 25px;
+                    }
                 }
                 
                 .experience {
