@@ -3,21 +3,22 @@
     <head>
         <title>Jorge Ferreira | Curriculum</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <div class="content">
-            <div class="top_container">
-                <img class="profile_picture" src="images/foto_perfil.JPG"></img>
-                <div class="top_text">
+            <div class="top-container">
+                <img class="profile-picture" src="images/foto_perfil.JPG"></img>
+                <div class="top-text">
                     <h1 class="name">Jorge Ferreira</h1>
                     <h3>Software Engineer</h3>
                 </div>
             </div>
-            <div class="information">
+            <div class="info-section">
                 <div class="info summary">
                     <h1>Summary</h1>
-                    <div class="summary container">
+                    <div class="summary text-container">
                         <div class="summary entry">
                             I started programming because I wanted to be able to tell the machine what I want it to do.
                             I’m a software engineer and I like back‑end development, but I have also done front‑end development and tinkered with SQL databases.
@@ -26,11 +27,7 @@
                     </div>
                 </div>
             </div>
-            <div class="information 2">
-                <div class="info education">
-                    <h1>Education</h1>
-                    Integrated MSc. in Computer Science at <a href="https://www.fct.unl.pt/">FCT Nova</a>
-                </div>
+            <div class="info-section">
                 <div class="info skills">
                     <h1>Skills</h1>
                     Java, Python, Bash, C, Rust, C#<br>
@@ -43,18 +40,14 @@
                     Portuguese - Native Speaker<br>
                     English - Cambridge English Key for Schools: A2 (CEFR level)
                 </div>
+                <div class="info education">
+                    <h1>Education</h1>
+                    Integrated MSc. in Computer Science at <a href="https://www.fct.unl.pt/">FCT Nova</a>
+                </div>
             </div>
-            <div class="experience">
+            <div class="entries-section">
                 <h1>Experience</h1>
                 <div class="entries">
-                    <div class="link entry">
-                        <b>Intern</b> - <b>Link Consulting:</b> March 2021 - August 2021<br>
-                        The <a href="https://www.linkconsulting.com/what-we-do/products/atlas8/">Atlas</a> solution from Link is a tool for companies to manage their assets.
-                        Atlas has a batch module for integration with third party tools and to run functions that evaluate analitical expressions.
-                        These functions are defined with parameters written in different text fields.
-                        The goal was to simplify the way those expressions are created and edited, and automatically integrating them with Atlas.
-                        This was achieved by building on top of the existing Vue.js front‑end and Java back‑end, using the Agile method.
-                    </div>
                     <div class="tardis entry">
                         <b>Software Researcher</b> - <b>NOVA.ID.FCT:</b> November 2024 - Today<br>
                         The goal is the investigation of mixed consistency transactions in distributed systems for the project <a href="https://www.project-tardis.eu">TaRDIS</a>.<br>
@@ -64,15 +57,25 @@
                             <li>The implementation, evaluation and documentation of mixed consistency transactional systems.</li>
                         </ul>
                     </div>
+                    <div class="link entry">
+                        <b>Intern</b> - <b>Link Consulting:</b> March 2021 - August 2021<br>
+                        The <a href="https://www.linkconsulting.com/what-we-do/products/atlas8/">Atlas</a> solution from Link is a tool for companies to manage their assets.
+                        Atlas has a batch module for integration with third party tools and to run functions that evaluate analitical expressions.
+                        These functions are defined with parameters written in different text fields.
+                        The goal was to simplify the way those expressions are created and edited, and automatically integrating them with Atlas.
+                        This was achieved by building on top of the existing Vue.js front‑end and Java back‑end, using the Agile method.
+                    </div>
                 </div>
             </div>
         </div>
         <footer>
             <div class="contacts">
                 Contacts<br>
-                <b><a class="contact" href="mailto:jorge.tferreira99@gmail.com"><i class="fa fa-envelope"></i> Email</a></b>
-                <b><a class="contact" href="https://www.linkedin.com/in/jl-ferreira"><i class="fa fa-linkedin"></i> LinkedIn</a></b>
-                <b><a class="contact" href="https://github.com/Jorge-L-F"><i class="fa fa-github"></i> GitHub</a></b>
+                <div class="contact-list">
+                    <b><a class="contact" href="mailto:jorge.tferreira99@gmail.com"><i class="fa fa-envelope"></i> Email</a></b>
+                    <b><a class="contact" href="https://www.linkedin.com/in/jl-ferreira"><i class="fa fa-linkedin"></i> LinkedIn</a></b>
+                    <b><a class="contact" href="https://github.com/Jorge-L-F"><i class="fa fa-github"></i> GitHub</a></b>
+                </div>
             </div>
             <div class="resources">
                 Resources<br>
@@ -121,7 +124,7 @@
                     text-align: center;
                 }
                 
-                .top_container {
+                .top-container {
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -132,17 +135,18 @@
                     box-shadow: 5px 5px green;
                 }
             
-                .top_text {
+                .top-text {
                     margin-left: 35px;
                     font-family: sans-serif;
                     font-size: 20px;
                     text-shadow: 2px 2px #00000090;
                 }
                 
-                .profile_picture {
+                .profile-picture {
                     border-radius: 10%;
+                    object-fit: scale-down;
                     width: 200px;
-                    height: 200px;
+                    height: auto;
                 }
                 
                 .name {
@@ -150,59 +154,112 @@
                     margin-bottom: 0px;
                 }
                 
-                .birth_date {
-                    margin-top: 3px;
-                }
-                
-                .information {
+                .info-section {
                     display: flex;
+                    flex-wrap: wrap;
                     justify-content: center;
                     line-height: 25px;
                 }
                 
                 .info {
-                    flex: 1 1 0px;
-                    flex-grow: 7;
-                    padding: 10px;
-                    padding-top: 30px;
-                    padding-bottom: 30px;
+                    flex: 1 auto 300px;
+                    margin-left: 40px;
+                    margin-right: 40px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
                 }
                 
-                .container,
-                .entries {
-                    display: flex;
-                    justify-content: center;
-                }
-                @media only screen and (max-width: 1000px) {
-                    .entries {
-                        display: block;
-                    }
-                    .entry {
-                        margin-top: 25px;
-                        margin-bottom: 25px;
-                    }
-                }
-                
-                .experience {
-                    padding: 15px;
+                .entries-section {
                     align-items: center;
                     justify-content: center;
                 }
                 
+                .text-container,
+                .entries {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+                
                 .entry {
+                    flex: 1 auto 300px;
                     max-width: 850px;
                     text-align: justify;
                     margin-right: 40px;
                     margin-left: 40px;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
                 }
                 
-                .contacts {
-                    padding-right: 50px;
+                .summary.entry {
+                    margin-right: 0px;
+                    margin-left: 0px;
+                }
+                
+                .contacts,
+                .resources {
+                    margin-right: 40px;
+                    margin-left: 40px;
+                }
+                
+                .contact-list {
+                    display: flex;
+                    flex-wrap: wrap;
                 }
                 
                 .contact {
+                    flex: 1 auto auto;
                     text-decoration: none;
                     margin-right: 10px;
+                }
+                
+                @media only screen and (max-width: 700px) {
+                    .profile-picture {
+                        width: 150px;
+                    }
+                    
+                    .top-text {
+                        font-size: 18px;
+                    }
+                    
+                    .info,
+                    .entry,
+                    .contacts,
+                    .resources {
+                        margin-right: 10px;
+                        margin-left: 10px;
+                    }
+                }
+                
+                @media only screen and (max-width: 549px) {
+                    .top-container {
+                        padding-top: 0px;
+                        padding-bottom: 0px;
+                    }
+                    
+                    .profile-picture {
+                        width: 100px;
+                    }
+                    
+                    .top-text {
+                        font-size: 17px;
+                    }
+                }
+                
+                @media only screen and (max-width: 449px) {
+                    .top-container {
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                    }
+                    
+                    .profile-picture {
+                        width: 100px;
+                    }
+                    
+                    .top-text {
+                        font-size: 13px;
+                        margin-left: 15px;
+                    }
                 }
             </style>
         </footer>
